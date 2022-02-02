@@ -3,7 +3,6 @@
   min-height: 64px;
   padding: 2em 0;
   text-align: center;
-  letter-spacing: -0.02em;
 }
 
 .header ul {
@@ -11,23 +10,42 @@
   padding: 0;
 }
 
-.header ul li {
+.header ul > li {
   display: inline-block;
-  padding: 0 10px;
+  padding: 0 0.4rem;
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 100%;
+  background-color: var(--primary);
+  font-weight: 500;
+}
+
+.header ul > li.active {
+  background-color: var(--grey-3);
+}
+
+.header ul > li a {
+  display: inline-block;
+  transform: translate(0, 0.35rem);
+}
+
+.header ul li ~ li {
+  margin-left: 1rem;
 }
 
 .header :global(a) {
-  color: var(--accents-3);
+  color: var(--white);
+  font-size: 0.93rem;
   font-weight: 400;
+  letter-spacing: 0.02rem;
 }
 
 .header :global(a.active) {
-  color: #0070f3;
   font-weight: 600;
 }
 
 @media (max-width: 600px) {
   .header {
-    padding: .5em 0 2em;
+    padding: 0.5em 0 2em;
   }
 }

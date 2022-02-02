@@ -4,11 +4,13 @@
   --gap: 1rem;
   --gap-double: 2rem;
 
-  --bg: #fff;
-  --fg: #000;
-  --accents-1: #111;
-  --accents-2: #333;
-  --accents-3: #888;
+  --white: #fff;
+  --black: #000;
+  --grey-1: #111;
+  --grey-2: #333;
+  --grey-3: rgb(71, 71, 71);
+  --primary: #bbc40f;
+  --primary-dark: #a9ac0d;
   --geist-foreground: #000;
 
   --radius: 8px;
@@ -26,6 +28,7 @@
 
 html,
 body {
+  color: rgb(53, 53, 53);
   padding: 0;
   margin: 0;
   font-size: 20px;
@@ -33,8 +36,8 @@ body {
 
 body {
   min-height: 100vh;
-  background: var(--bg);
-  color: var(--fg);
+  background: var(--white);
+  color: var(--black);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
@@ -55,7 +58,7 @@ pre[class*='language-'] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.95em;
+  font-size: 0.93em;
   line-height: 1.4em;
   tab-size: 4;
   hyphens: none;
@@ -82,7 +85,7 @@ pre[class*='language-'] {
 .token.boolean,
 .token.variable,
 .token.constant {
-  color: #36acaa;
+  color: #598b3c;
 }
 .token.atrule,
 .language-autohotkey .token.selector,
@@ -94,10 +97,13 @@ code[class*='language-css'] {
   color: var(--geist-success);
 }
 .token.keyword {
-  color: #ff0078;
-  font-weight: bolder;
+  color: #1c9dc4;
 }
-.token.function,
+
+.token.function {
+  color: rgba(159, 80, 177, 0.8);
+}
+
 .token.tag,
 .token.class-name,
 .token.number,
@@ -105,11 +111,11 @@ code[class*='language-css'] {
   color: var(--geist-success);
 }
 .language-autohotkey .token.tag {
-  color: #9a050f;
+  color: #be5e1e;
 }
 .token.selector,
 .language-autohotkey .token.keyword {
-  color: #00009f;
+  color: #3939ac;
 }
 .token.important,
 .token.bold {
@@ -119,7 +125,7 @@ code[class*='language-css'] {
   font-style: italic;
 }
 .token.deleted {
-  color: red;
+  color: rgb(202, 74, 74);
   font-weight: bolder;
 }
 .token.inserted {
@@ -140,22 +146,22 @@ code[class*='language-css'] {
   color: #999;
 }
 .language-markdown .token.url {
-  color: #ff0078;
+  color: #667a5e;
   font-weight: bolder;
 }
 .token.selector {
-  color: #2b91af;
+  color: #197d9b;
 }
 .token.property,
 .token.entity {
-  color: #f00;
+  color: rgb(226, 57, 57);
 }
 .token.attr-name,
 .token.regex {
   color: #d9931e;
 }
 .token.directive.tag .tag {
-  background: #ff0;
+  background: rgb(216, 216, 64);
   color: #393a34;
 }
 /* dark */
@@ -166,7 +172,7 @@ pre.dark[class*='language-'] {
   color: var(--geist-success);
 }
 .dark .token.string {
-  color: #50e3c2;
+  color: #31caa9;
 }
 .dark .token.function,
 .dark .token.tag,
@@ -217,7 +223,7 @@ pre.dark[class*='language-'] {
 .feature h4 {
   margin: 0 0 0 0.5rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.93rem;
   white-space: nowrap;
 }
 
@@ -237,7 +243,7 @@ pre.dark[class*='language-'] {
   width: 35rem;
   max-width: 100vw;
   padding: 0 2rem;
-  background: var(--bg);
+  background: var(--white);
   margin: var(--gap-half) auto;
 }
 figure {
@@ -252,11 +258,13 @@ figure {
 }
 
 a {
-  color: #0070f3;
+  color: var(--primary);
   text-decoration: none;
 }
+
 a:hover {
-  color: #3291ff;
+  transition: all 0.2s ease-out;
+  color: var(--primary-dark);
 }
 
 .links {
@@ -281,14 +289,20 @@ h1 {
   margin: var(--gap-double) 0 calc(0.5 * var(--gap)) 0;
   font-size: 2.25rem;
   font-weight: 800;
-  letter-spacing: -0.05rem;
+  color: var(--grey-1);
 }
 
+/* TODO: Set reset.css */
 h2 {
-  font-weight: 300;
-  font-size: 1.25rem;
-  letter-spacing: -0.02rem;
-  color: var(--accents-3);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--grey-1);
+}
+
+h3 {
+  margin: 0;
+  color: var(--grey-1);
 }
 
 .video {
@@ -305,12 +319,14 @@ h2 {
   outline: none;
 }
 
+/* TODO: Set reset.css */
+
 p {
-  color: #555;
+  margin: 0;
   font-weight: 400;
-  font-size: 0.94rem;
-  line-height: 1.7;
+  font-size: 0.93rem;
 }
+
 pre {
   white-space: pre;
 }
@@ -320,11 +336,11 @@ pre :global(code) {
 }
 
 code {
-  font-size: 0.8rem;
   background: #f1f1f1;
   padding: 0.2rem;
   border-radius: var(--radius);
   font-family: var(--font-mono);
+  font-size: 0.8rem;
 }
 
 .slice {
@@ -348,8 +364,7 @@ code {
   }
 
   h2 {
-    font-size: 0.95rem;
-    letter-spacing: 0;
+    font-size: 0.93rem;
   }
 }
 

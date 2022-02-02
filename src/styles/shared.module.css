@@ -9,3 +9,8 @@
 .layout h2 {
   text-align: center;
 }
+
+.layout h4 {
+  text-align: center;
+  line-height: 170%;
+}

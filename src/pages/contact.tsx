@@ -5,30 +5,24 @@ import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
 import GitHub from '../components/svgs/github'
-import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
 import LinkedIn from '../components/svgs/linkedin'
 
 const contacts = [
   {
-    Comp: Twitter,
-    alt: 'twitter icon',
-    link: 'https://twitter.com/_ijjk',
-  },
-  {
     Comp: GitHub,
     alt: 'github icon',
-    link: 'https://github.com/ijjk',
+    link: 'https://github.com/doyoonear',
   },
   {
     Comp: LinkedIn,
     alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/',
+    link: 'https://www.linkedin.com/in/doyoonleee/',
   },
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
+    link: 'mailto:doyoonleee@gmail.com?subject=Notion Blog',
   },
 ]
 
@@ -38,15 +32,15 @@ export default function Contact() {
       <Header titlePre="Contact" />
       <div className={sharedStyles.layout}>
         <div className={contactStyles.avatar}>
-          <img src="/avatar.png" alt="avatar with letters JJ" height={60} />
+          <img src="/pear.png" alt="pear as avatar image" height={60} />
         </div>
 
-        <h1 style={{ marginTop: 0 }}>Contact</h1>
+        <h1 className={contactStyles.title}>Contact</h1>
 
-        <div className={contactStyles.name}>
-          JJ Kasper - Next.js Engineer @{' '}
-          <ExtLink href="https://vercel.com">Vercel</ExtLink>
-        </div>
+        <h2 className={contactStyles.name}>Doyoon Lee - Frontend Engineer</h2>
+        <h3 className={contactStyles.name}>
+          @ <ExtLink href="https://day1company.co.kr/">Day1company</ExtLink>
+        </h3>
 
         <div className={contactStyles.links}>
           {contacts.map(({ Comp, link, alt }) => {

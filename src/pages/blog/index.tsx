@@ -63,13 +63,13 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>My Notion Blog</h1>
+        <h1>Pear Enough</h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
         {posts.map((post) => {
           return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
+            <article className={blogStyles.postPreview} key={post.Slug}>
               <h3>
                 <span className={blogStyles.titleContainer}>
                   {!post.Published && (
@@ -81,19 +81,20 @@ const Index = ({ posts = [], preview }) => {
                 </span>
               </h3>
               {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
+                <p className="authors">By: {post.Authors.join(' ')}</p>
               )}
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <aside className="posted">
+                  Posted: {getDateStr(post.Date)}
+                </aside>
               )}
               <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
+                {(!post.preview || post.preview.length === 0) && ''}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
               </p>
-            </div>
+            </article>
           )
         })}
       </div>

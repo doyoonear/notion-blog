@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <feed xmlns="http://www.w3.org/2005/Atom">
+    <title>My Blog</title>
+    <subtitle>Blog</subtitle>
+    <link href="/atom" rel="self" type="application/rss+xml"/>
+    <link href="/" />
+    <updated>2022-02-02T13:10:03.187Z</updated>
+    <id>My Notion Blog</id>
+    <entry>
+      <id>/blog/typescript-type-guard</id>
+      <title>Typescript - Type Guard (타입 가드)</title>
+      <link href="/blog/typescript-type-guard"/>
+      <updated>2022-01-31T15:00:00.778Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          <p>this is preview</p>
+          <p class="more">
+            <a href="/blog/typescript-type-guard">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/typescript-generic</id>
+      <title>Typescript - Generic</title>
+      <link href="/blog/typescript-generic"/>
+      <updated>2022-01-31T15:00:00.781Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/typescript-generic">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/typescript-excess-property-checking</id>
+      <title>Typescript - excess property checking(과잉 속성 검사)</title>
+      <link href="/blog/typescript-excess-property-checking"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/typescript-excess-property-checking">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/typescript-interface</id>
+      <title>Typescript - Interface</title>
+      <link href="/blog/typescript-interface"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/typescript-interface">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/javascript-21-04-08</id>
+      <title>김영보 자바스크립트 중고급</title>
+      <link href="/blog/javascript-21-04-08"/>
+      <updated>2021-10-30T15:00:00.783Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/javascript-21-04-08">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/typescript-mapped-type</id>
+      <title>Typescript - Mapped Type</title>
+      <link href="/blog/typescript-mapped-type"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/typescript-mapped-type">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/functional-programming-4</id>
+      <title>함수형 프로그래밍 4 - map, filter, reduce</title>
+      <link href="/blog/functional-programming-4"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/functional-programming-4">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/functional-programming-2</id>
+      <title>함수형 프로그래밍 2 - ES6에서의 순회(이터레이터 프로토콜)</title>
+      <link href="/blog/functional-programming-2"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/functional-programming-2">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch3-filesystem-2</id>
+      <title>Node.js 3장 - 파일 시스템 이용하기</title>
+      <link href="/blog/node-ch3-filesystem-2"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch3-filesystem-2">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/javascript-21-03-21</id>
+      <title>자바스크립트 ES6+ 심화</title>
+      <link href="/blog/javascript-21-03-21"/>
+      <updated>2021-10-30T15:00:00.785Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/javascript-21-03-21">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/functional-programming-3</id>
+      <title>함수형 프로그래밍 3 - 제너레이터와 이터레이터</title>
+      <link href="/blog/functional-programming-3"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/functional-programming-3">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/functional-programming-1</id>
+      <title>함수형 프로그래밍 1 - 함수형 자바스크립트 기본기</title>
+      <link href="/blog/functional-programming-1"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/functional-programming-1">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/about-svg</id>
+      <title>svg 에 대하여</title>
+      <link href="/blog/about-svg"/>
+      <updated>2021-11-08T15:00:00.788Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/about-svg">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/2021-memoirs</id>
+      <title>2021년 주니어 개발자의 첫 해, 회고록</title>
+      <link href="/blog/2021-memoirs"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/2021-memoirs">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/browser-networking-ch4</id>
+      <title>네트워크 책 Chapter 4 - TLS (Transport Layer Security)</title>
+      <link href="/blog/browser-networking-ch4"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/browser-networking-ch4">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/browser-networking-ch3</id>
+      <title>네트워크 책 Chapter 3 - Building Blocks of UDP</title>
+      <link href="/blog/browser-networking-ch3"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/browser-networking-ch3">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/조은-강의---next-jest</id>
+      <title>조은 강의 - Next, Jest</title>
+      <link href="/blog/조은-강의---next-jest"/>
+      <updated>2021-09-20T15:00:00.791Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/조은-강의---next-jest">Read more</a>
+          </p>
+        </div>
+      </content>
+      
+    </entry>
+    <entry>
+      <id>/blog/node-ch6</id>
+      <title>Node.js 6장 - Express 웹 서버 만들기</title>
+      <link href="/blog/node-ch6"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch6">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch5</id>
+      <title>Node.js 5장 - 패키지 매니저 (NPM)</title>
+      <link href="/blog/node-ch5"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch5">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/conference-fe-conf</id>
+      <title>FE conf 요약</title>
+      <link href="/blog/conference-fe-conf"/>
+      <updated>2021-11-21T15:00:00.793Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/conference-fe-conf">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch4</id>
+      <title>Node.js 4장 - HTTP 모듈로 서버 만들기</title>
+      <link href="/blog/node-ch4"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch4">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch3-error-handling</id>
+      <title>Node.js 3장 - 에러 처리하기</title>
+      <link href="/blog/node-ch3-error-handling"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch3-error-handling">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/about-ga-gtm</id>
+      <title>GA, GTM</title>
+      <link href="/blog/about-ga-gtm"/>
+      <updated>2021-07-09T15:00:00.796Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/about-ga-gtm">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/functional-programming-0</id>
+      <title>함수형 프로그래밍 0 - Introduction</title>
+      <link href="/blog/functional-programming-0"/>
+      <updated>2021-10-30T15:00:00.796Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/functional-programming-0">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch3-thread-pool</id>
+      <title>Node.js 3장- 스레드풀과 커스텀 이벤트</title>
+      <link href="/blog/node-ch3-thread-pool"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch3-thread-pool">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/vue3-advanced</id>
+      <title>Vue3 심화</title>
+      <link href="/blog/vue3-advanced"/>
+      <updated>2021-02-04T15:00:00.798Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/vue3-advanced">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch3-filesystem-1</id>
+      <title>Node.js 3장 - 파일시스템 접근하기</title>
+      <link href="/blog/node-ch3-filesystem-1"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch3-filesystem-1">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/http-21-03-14</id>
+      <title>HTTP 완벽 가이드</title>
+      <link href="/blog/http-21-03-14"/>
+      <updated>2021-10-30T15:00:00.799Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/http-21-03-14">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/node-ch3-node-modules</id>
+      <title>Node.js 3장 - 노드 내장 모듈</title>
+      <link href="/blog/node-ch3-node-modules"/>
+      <updated>1970-01-01T00:00:00.000Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/node-ch3-node-modules">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/browser-networking-ch2</id>
+      <title>네트워크 책 Chapter 2 - Building Blocks of TCP</title>
+      <link href="/blog/browser-networking-ch2"/>
+      <updated>2021-11-21T15:00:00.800Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/browser-networking-ch2">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/javascript-21-03-30</id>
+      <title>김영보 자바스크립트 비기너</title>
+      <link href="/blog/javascript-21-03-30"/>
+      <updated>2021-10-30T15:00:00.800Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/javascript-21-03-30">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/about-regex</id>
+      <title>regex, regular expression 팁</title>
+      <link href="/blog/about-regex"/>
+      <updated>2021-10-30T15:00:00.800Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/about-regex">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/browser-networking-ch1</id>
+      <title>네트워크 책 Chapter 1 - Primer on Latency and Bandwidth</title>
+      <link href="/blog/browser-networking-ch1"/>
+      <updated>2021-11-20T15:00:00.801Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/browser-networking-ch1">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/web-rtc-21-03-12</id>
+      <title>WEB RTC 웹 RTC 란?</title>
+      <link href="/blog/web-rtc-21-03-12"/>
+      <updated>2021-10-30T15:00:00.801Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/web-rtc-21-03-12">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/vue3-basic</id>
+      <title>Vue3 베이직 공부</title>
+      <link href="/blog/vue3-basic"/>
+      <updated>2021-02-04T15:00:00.801Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/vue3-basic">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+    <entry>
+      <id>/blog/typescript-type-examples</id>
+      <title>Typescript - Type Examples</title>
+      <link href="/blog/typescript-type-examples"/>
+      <updated>2022-01-31T15:00:00.802Z</updated>
+      <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+          
+          <p class="more">
+            <a href="/blog/typescript-type-examples">Read more</a>
+          </p>
+        </div>
+      </content>
+      <author><name>Doyoon Lee</name></author>
+    </entry>
+  </feed>
