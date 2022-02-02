@@ -7,11 +7,13 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
   const slugger = new Slugger()
 
   const { value } = collectionBlock
+
   let table: any = {}
   const col = await queryCollection({
     collectionId: value.collection_id,
     collectionViewId: value.view_ids[0],
   })
+
   const entries = values(col.recordMap.block).filter((block: any) => {
     return block.value && block.value.parent_id === value.collection_id
   })
@@ -29,7 +31,7 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
       row.id = entry.value.id
     }
 
-    schemaKeys.forEach(key => {
+    schemaKeys.forEach((key) => {
       // might be undefined
       let val = props[key] && props[key][0][0]
 
