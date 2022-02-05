@@ -9,18 +9,20 @@ export default async function getPageData(pageId: string) {
     var chunkNumber = 0
     var data = await loadPageChunk({ pageId, chunkNumber })
     var blocks = data.recordMap.block
-
     while (data.cursor.stack.length !== 0 && chunkNumber < maximumChunckNumer) {
       chunkNumber = chunkNumber + 1
       data = await loadPageChunk({ pageId, chunkNumber, cursor: data.cursor })
       blocks = Object.assign(blocks, data.recordMap.block)
     }
+
     const blockArray = values(blocks)
+
+    let pageData
     if (blockArray[0] && blockArray[0].value.content) {
-      // remove table blocks
+      pageData = blockArray[0]
       blockArray.splice(0, 3)
     }
-    return { blocks: blockArray }
+    return { blocks: blockArray, pageData }
   } catch (err) {
     console.error(`Failed to load pageData for ${pageId}`, err)
     return { blocks: [] }

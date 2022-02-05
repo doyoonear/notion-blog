@@ -32,14 +32,15 @@ export default function Contact() {
       <Header titlePre="Contact" />
       <div className={sharedStyles.layout}>
         <div className={contactStyles.avatar}>
-          <img src="/pear.png" alt="pear as avatar image" height={60} />
+          <img src="/pear.png" alt="pear as avatar image" height={30} />
         </div>
 
         <h1 className={contactStyles.title}>Contact</h1>
 
-        <h2 className={contactStyles.name}>Doyoon Lee - Frontend Engineer</h2>
-        <h3 className={contactStyles.name}>
-          @ <ExtLink href="https://day1company.co.kr/">Day1company</ExtLink>
+        <h2 className={contactStyles.name}>Doyoon Lee</h2>
+        <h2 className={contactStyles.name}>Frontend Engineer</h2>
+        <h3 className={contactStyles.company}>
+          <ExtLink href="https://day1company.co.kr/">@ Day1company</ExtLink>
         </h3>
 
         <div className={contactStyles.links}>
