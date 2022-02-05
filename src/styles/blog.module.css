@@ -109,6 +109,9 @@
 
 .coverImg {
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 13rem;
   object-fit: cover;
@@ -117,7 +120,6 @@
 
 .coverImg > img {
   width: 100%;
-  transform: translateY(-10rem);
 }
 
 .post :global(.tweet) {
@@ -169,7 +171,7 @@
 .post {
   max-width: calc(700px + 10%);
   margin: 0 auto;
-  padding: 5%;
+  padding: 1rem 4rem 4rem 4rem;
 }
 
 .post :global(hr) {
