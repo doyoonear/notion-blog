@@ -19,7 +19,7 @@ export default async function getPageData(pageId: string) {
 
     let pageData
     if (blockArray[0] && blockArray[0].value.content) {
-      pageData = blockArray[0]
+      pageData = blockArray[0].value
       blockArray.splice(0, 3)
     }
     return { blocks: blockArray, pageData }
