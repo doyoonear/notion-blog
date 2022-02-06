@@ -17,7 +17,9 @@ import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
 export async function getStaticProps({ params: { slug }, preview }) {
   // load the postsTable so that we can get the page's ID
   const postsTable = await getBlogIndex()
+  // console.log('postsTable -------------------', postsTable)
   const post = postsTable[slug]
+  console.log('post-------------', post)
 
   // if we can't find the post or if it is unpublished and
   // viewed without preview mode then we just redirect to /blog
@@ -33,8 +35,13 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
 
   const postData = await getPageData(post.id)
-  post.content = postData.blocks
-  post.pageCover = postData.pageData.format.page_cover
+  const postContent = postData.blocks
+  if (postData.pageData.format) {
+    post.pageCover = postData.pageData.format.page_cover
+  } else {
+    post.pageCover = null
+  }
+  console.log(' post.pageCover ', post.pageCover)
 
   for (let i = 0; i < postData.blocks.length; i++) {
     const { value } = postData.blocks[i]
@@ -61,9 +68,12 @@ export async function getStaticProps({ params: { slug }, preview }) {
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
 
+  // TODO : post 에 원래 들어있는 column들은 내버려두고,
+  // 새롭게 추가되는 것들은 따로 return 한다.
   return {
     props: {
       post,
+      postContent,
       preview: preview || false,
     },
     revalidate: 10,
@@ -85,7 +95,7 @@ export async function getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const RenderPost = ({ post, redirect, preview }) => {
+const RenderPost = ({ post, postContent, redirect, preview }) => {
   const router = useRouter()
 
   let listTagName: string | null = null
@@ -166,14 +176,14 @@ const RenderPost = ({ post, redirect, preview }) => {
 
         <hr />
 
-        {(!post.content || post.content.length === 0) && (
+        {(!postContent || postContent.length === 0) && (
           <p>This post has no content</p>
         )}
 
-        {(post.content || []).map((block, blockIdx) => {
+        {(postContent || []).map((block, blockIdx) => {
           const { value } = block
           const { type, properties, id, parent_id } = value
-          const isLast = blockIdx === post.content.length - 1
+          const isLast = blockIdx === postContent.length - 1
           const isList = listTypes.has(type)
           let toRender = []
 
