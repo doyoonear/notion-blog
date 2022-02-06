@@ -7,6 +7,7 @@ import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
+import { values } from '../../lib/notion/rpc'
 import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
@@ -19,8 +20,6 @@ export async function getStaticProps({ params: { slug }, preview }) {
   const postsTable = await getBlogIndex()
   // console.log('postsTable -------------------', postsTable)
   const post = postsTable[slug]
-  console.log('post-------------', post)
-
   // if we can't find the post or if it is unpublished and
   // viewed without preview mode then we just redirect to /blog
   if (!post || (post.Published !== 'Yes' && !preview)) {
@@ -40,26 +39,33 @@ export async function getStaticProps({ params: { slug }, preview }) {
     ? postData.pageData.format.page_cover
     : null
 
-  for (let i = 0; i < postData.blocks.length; i++) {
-    const { value } = postData.blocks[i]
-    const { type, properties } = value
-    if (type == 'tweet') {
-      const src = properties.source[0][0]
-      // parse id from https://twitter.com/_ijjk/status/TWEET_ID format
-      const tweetId = src.split('/')[5].split('?')[0]
-      if (!tweetId) continue
+  const postDataList = values(postContent)
 
-      try {
-        const res = await fetch(
-          `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
-        )
-        const json = await res.json()
-        properties.html = json.html.split('<script')[0]
-        post.hasTweet = true
-      } catch (_) {
-        console.log(`Failed to get tweet embed for ${src}`)
-      }
+  const fetchTweetById = async (tweetId) => {
+    try {
+      const res = await fetch(
+        `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
+      )
+      const json = await res.json()
+      return json.html.split('<script')[0]
+    } catch (_) {
+      console.log(`Failed to get tweet embed for ${tweetId}`)
     }
+  }
+
+  const tweetDataList = postDataList
+    .filter((item) => item.value.type === 'tweet')
+    .map(async (item) => {
+      if (!item) return
+      const src = item.value.properties.source[0][0]
+      const tweetId = src.split('/')[5].split('?')[0]
+      const tweetHtml = await fetchTweetById(tweetId)
+
+      return { ...item, src, tweetHtml }
+    })
+
+  if (tweetDataList.length > 0) {
+    post.hasTweet = true
   }
 
   const { users } = await getNotionUsers(post.Authors || [])
