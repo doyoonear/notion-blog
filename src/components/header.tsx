@@ -26,14 +26,12 @@ const Header = ({ titlePre = '' }) => {
         <meta name="og:title" content="Pear Enough - Doyoon Lee" />
         <meta property="og:image" content={ogImageUrl} />
       </Head>
-      <ul>
+      <ul className={styles.navigation}>
         {navItems.map(({ label, page, link }) => (
-          <li key={label} className={pathname === page ? 'active' : undefined}>
+          <li key={page} className={pathname === page ? 'active' : undefined}>
             {page ? (
               <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
-                  {label}
-                </a>
+                <a>{label}</a>
               </Link>
             ) : (
               <ExtLink href={link}>{label}</ExtLink>

@@ -31,6 +31,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
       unstable_revalidate: 5,
     }
   }
+
   const postData = await getPageData(post.id)
   post.content = postData.blocks
   post.pageCover = postData.pageData.format.page_cover
