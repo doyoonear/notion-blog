@@ -7,6 +7,7 @@ import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
+import { values } from '../../lib/notion/rpc'
 import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
@@ -19,8 +20,6 @@ export async function getStaticProps({ params: { slug }, preview }) {
   const postsTable = await getBlogIndex()
   // console.log('postsTable -------------------', postsTable)
   const post = postsTable[slug]
-  console.log('post-------------', post)
-
   // if we can't find the post or if it is unpublished and
   // viewed without preview mode then we just redirect to /blog
   if (!post || (post.Published !== 'Yes' && !preview)) {
@@ -35,35 +34,37 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
 
   const postData = await getPageData(post.id)
-  const postContent = postData.blocks
-  if (postData.pageData.format) {
-    post.pageCover = postData.pageData.format.page_cover
-  } else {
-    post.pageCover = null
-  }
-  console.log(' post.pageCover ', post.pageCover)
 
-  for (let i = 0; i < postData.blocks.length; i++) {
-    const { value } = postData.blocks[i]
-    const { type, properties } = value
-    if (type == 'tweet') {
-      const src = properties.source[0][0]
-      // parse id from https://twitter.com/_ijjk/status/TWEET_ID format
-      const tweetId = src.split('/')[5].split('?')[0]
-      if (!tweetId) continue
+  const postPageCover = postData.pageData.format
+    ? postData.pageData.format.page_cover
+    : null
 
-      try {
-        const res = await fetch(
-          `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
-        )
-        const json = await res.json()
-        properties.html = json.html.split('<script')[0]
-        post.hasTweet = true
-      } catch (_) {
-        console.log(`Failed to get tweet embed for ${src}`)
-      }
+  const postContent = postData.blocks // { 'slug-name': { block }, 'slug-name': { block }, }
+  // const postDataList = values(postContent) // [{ block }, { block }]
+
+  const updateTweetHtml = async ({ tweetId, block }) => {
+    try {
+      const json = await fetch(
+        `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
+      ).json()
+      const res = json.html.split('<script')[0]
+      block.value.properties.html = res
+      return block
+    } catch (_) {
+      console.log(`Failed to get tweet embed for ${tweetId}`)
     }
   }
+
+  Object.keys(postContent).forEach((key) => {
+    const block = postContent[key]
+
+    if (block.value.type === 'tweet') {
+      // post.hasTweet = true
+      const src = block.value.properties.source[0][0]
+      const tweetId = src.split('/')[5].split('?')[0]
+      updateTweetHtml(tweetId)
+    }
+  })
 
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
@@ -74,6 +75,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
     props: {
       post,
       postContent,
+      postPageCover,
       preview: preview || false,
     },
     revalidate: 10,
@@ -95,7 +97,13 @@ export async function getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const RenderPost = ({ post, postContent, redirect, preview }) => {
+const RenderPost = ({
+  post,
+  postContent,
+  postPageCover,
+  redirect,
+  preview,
+}) => {
   const router = useRouter()
 
   let listTagName: string | null = null
@@ -163,7 +171,7 @@ const RenderPost = ({ post, postContent, redirect, preview }) => {
         </div>
       )}
       <div className={blogStyles.coverImg}>
-        <img src={post.pageCover} alt="page-cover-image" />
+        <img src={postPageCover} alt="page-cover-image" />
       </div>
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
@@ -183,6 +191,7 @@ const RenderPost = ({ post, postContent, redirect, preview }) => {
         {(postContent || []).map((block, blockIdx) => {
           const { value } = block
           const { type, properties, id, parent_id } = value
+          console.log('properties ----', properties)
           const isLast = blockIdx === postContent.length - 1
           const isList = listTypes.has(type)
           let toRender = []
