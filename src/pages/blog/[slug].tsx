@@ -36,9 +36,12 @@ export async function getStaticProps({ params: { slug }, preview }) {
 
   const postData = await getPageData(post.id)
   const postContent = postData.blocks
-  const postPageCover = postData.pageData.format
-    ? postData.pageData.format.page_cover
-    : null
+  if (postData.pageData.format) {
+    post.pageCover = postData.pageData.format.page_cover
+  } else {
+    post.pageCover = null
+  }
+  console.log(' post.pageCover ', post.pageCover)
 
   for (let i = 0; i < postData.blocks.length; i++) {
     const { value } = postData.blocks[i]
@@ -71,7 +74,6 @@ export async function getStaticProps({ params: { slug }, preview }) {
     props: {
       post,
       postContent,
-      postPageCover,
       preview: preview || false,
     },
     revalidate: 10,
@@ -93,13 +95,7 @@ export async function getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const RenderPost = ({
-  post,
-  postContent,
-  postPageCover,
-  redirect,
-  preview,
-}) => {
+const RenderPost = ({ post, postContent, redirect, preview }) => {
   const router = useRouter()
 
   let listTagName: string | null = null
@@ -167,7 +163,7 @@ const RenderPost = ({
         </div>
       )}
       <div className={blogStyles.coverImg}>
-        <img src={postPageCover} alt="page-cover-image" />
+        <img src={post.pageCover} alt="page-cover-image" />
       </div>
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
