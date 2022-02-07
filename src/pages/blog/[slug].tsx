@@ -42,14 +42,13 @@ export async function getStaticProps({ params: { slug }, preview }) {
   const postContent = postData.blocks // { 'slug-name': { block }, 'slug-name': { block }, }
   // const postDataList = values(postContent) // [{ block }, { block }]
 
-  const updateTweetHtml = async ({ tweetId, block }) => {
+  const fetchTweetById = async (tweetId) => {
     try {
-      const json = await fetch(
+      const res = await fetch(
         `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
-      ).json()
-      const res = json.html.split('<script')[0]
-      block.value.properties.html = res
-      return block
+      )
+      const json = await res.json()
+      return json.html.split('<script')[0]
     } catch (_) {
       console.log(`Failed to get tweet embed for ${tweetId}`)
     }
@@ -62,7 +61,13 @@ export async function getStaticProps({ params: { slug }, preview }) {
       // post.hasTweet = true
       const src = block.value.properties.source[0][0]
       const tweetId = src.split('/')[5].split('?')[0]
-      updateTweetHtml(tweetId)
+
+      ;(async function () {
+        const res = await fetchTweetById(tweetId)
+        block.value.properties.html = res
+        console.log('block ---', block) // 여기서는 html 잘 들어가고, postContent가 실제로 바뀌지 않음
+        return block
+      })()
     }
   })
 
