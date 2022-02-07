@@ -39,32 +39,29 @@ export async function getStaticProps({ params: { slug }, preview }) {
     ? postData.pageData.format.page_cover
     : null
 
-  const postContent = postData.blocks // { 'slug-name': { block }, 'slug-name': { block }, }
-  // const postDataList = values(postContent) // [{ block }, { block }]
+  const postContent = postData.blocks
 
-  const updateTweetHtml = async ({ tweetId, block }) => {
-    try {
-      const json = await fetch(
-        `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
-      ).json()
-      const res = json.html.split('<script')[0]
-      block.value.properties.html = res
-      return block
-    } catch (_) {
-      console.log(`Failed to get tweet embed for ${tweetId}`)
+  for (let i = 0; i < postContent.length; i++) {
+    const { value } = postContent[i]
+    const { type, properties } = value
+    if (type == 'tweet') {
+      const src = properties.source[0][0]
+      // parse id from https://twitter.com/_ijjk/status/TWEET_ID format
+      const tweetId = src.split('/')[5].split('?')[0]
+      if (!tweetId) continue
+
+      try {
+        const res = await fetch(
+          `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
+        )
+        const json = await res.json()
+        properties.html = json.html.split('<script')[0]
+        post.hasTweet = true
+      } catch (_) {
+        console.log(`Failed to get tweet embed for ${src}`)
+      }
     }
   }
-
-  Object.keys(postContent).forEach((key) => {
-    const block = postContent[key]
-
-    if (block.value.type === 'tweet') {
-      // post.hasTweet = true
-      const src = block.value.properties.source[0][0]
-      const tweetId = src.split('/')[5].split('?')[0]
-      updateTweetHtml(tweetId)
-    }
-  })
 
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
@@ -170,9 +167,12 @@ const RenderPost = ({
           </div>
         </div>
       )}
-      <div className={blogStyles.coverImg}>
-        <img src={postPageCover} alt="page-cover-image" />
-      </div>
+      {postPageCover && (
+        <div className={blogStyles.coverImg}>
+          <img src={postPageCover} alt="page-cover-image" />
+        </div>
+      )}
+
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
         {post.Authors.length > 0 && (
@@ -191,7 +191,6 @@ const RenderPost = ({
         {(postContent || []).map((block, blockIdx) => {
           const { value } = block
           const { type, properties, id, parent_id } = value
-          console.log('properties ----', properties)
           const isLast = blockIdx === postContent.length - 1
           const isList = listTypes.has(type)
           let toRender = []
