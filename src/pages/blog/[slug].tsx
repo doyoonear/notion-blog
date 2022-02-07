@@ -34,12 +34,13 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
 
   const postData = await getPageData(post.id)
-  const postContent = postData.blocks
+
   const postPageCover = postData.pageData.format
     ? postData.pageData.format.page_cover
     : null
 
-  const postDataList = values(postContent)
+  const postContent = postData.blocks // { 'slug-name': { block }, 'slug-name': { block }, }
+  // const postDataList = values(postContent) // [{ block }, { block }]
 
   const fetchTweetById = async (tweetId) => {
     try {
@@ -53,20 +54,22 @@ export async function getStaticProps({ params: { slug }, preview }) {
     }
   }
 
-  const tweetDataList = postDataList
-    .filter((item) => item.value.type === 'tweet')
-    .map(async (item) => {
-      if (!item) return
-      const src = item.value.properties.source[0][0]
+  Object.keys(postContent).forEach((key) => {
+    const block = postContent[key]
+
+    if (block.value.type === 'tweet') {
+      // post.hasTweet = true
+      const src = block.value.properties.source[0][0]
       const tweetId = src.split('/')[5].split('?')[0]
-      const tweetHtml = await fetchTweetById(tweetId)
 
-      return { ...item, src, tweetHtml }
-    })
-
-  if (tweetDataList.length > 0) {
-    post.hasTweet = true
-  }
+      ;(async function () {
+        const res = await fetchTweetById(tweetId)
+        block.value.properties.html = res
+        console.log('block ---', block) // 여기서는 html 잘 들어가고, postContent가 실제로 바뀌지 않음
+        return block
+      })()
+    }
+  })
 
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map((id) => users[id].full_name)
@@ -193,6 +196,7 @@ const RenderPost = ({
         {(postContent || []).map((block, blockIdx) => {
           const { value } = block
           const { type, properties, id, parent_id } = value
+          console.log('properties ----', properties)
           const isLast = blockIdx === postContent.length - 1
           const isList = listTypes.has(type)
           let toRender = []
