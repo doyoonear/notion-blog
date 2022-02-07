@@ -25,6 +25,7 @@ const Header = ({ titlePre = '' }) => {
         />
         <meta name="og:title" content="Pear Enough - Doyoon Lee" />
         <meta property="og:image" content={ogImageUrl} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <ul className={styles.navigation}>
         {navItems.map(({ label, page, link }) => (
