@@ -28,19 +28,23 @@ const Header = ({ titlePre = '' }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.navBar}>
-        <span className={styles.homeLogo}>🚪</span>
+        <Link href="/">
+          <span className={styles.homeLogo}>🚪</span>
+        </Link>
         <ul className={styles.navigation}>
-          {navItems.map(({ label, page, link }) => (
-            <li key={page} className={pathname === page ? 'active' : undefined}>
-              {page ? (
-                <Link href={page}>
-                  <a>{label}</a>
-                </Link>
-              ) : (
-                <ExtLink href={link}>{label}</ExtLink>
-              )}
-            </li>
-          ))}
+          {navItems.map(
+            ({ label, page, link }) =>
+              page && (
+                <li
+                  key={page}
+                  className={pathname === page ? 'active' : undefined}
+                >
+                  <Link href={page}>
+                    <a>{label}</a>
+                  </Link>
+                </li>
+              )
+          )}
         </ul>
       </div>
     </header>
