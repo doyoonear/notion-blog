@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'Home', page: '/' },
+  { label: 'Drawings', page: '/drawings' },
   { label: 'Blog', page: '/blog' },
   { label: 'Contact', page: '/contact' },
 ]
@@ -27,19 +27,22 @@ const Header = ({ titlePre = '' }) => {
         <meta property="og:image" content={ogImageUrl} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ul className={styles.navigation}>
-        {navItems.map(({ label, page, link }) => (
-          <li key={page} className={pathname === page ? 'active' : undefined}>
-            {page ? (
-              <Link href={page}>
-                <a>{label}</a>
-              </Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </li>
-        ))}
-      </ul>
+      <div className={styles.navBar}>
+        <span className={styles.homeLogo}>🚪</span>
+        <ul className={styles.navigation}>
+          {navItems.map(({ label, page, link }) => (
+            <li key={page} className={pathname === page ? 'active' : undefined}>
+              {page ? (
+                <Link href={page}>
+                  <a>{label}</a>
+                </Link>
+              ) : (
+                <ExtLink href={link}>{label}</ExtLink>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   )
 }
