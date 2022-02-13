@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Header from '../../components/header'
-import PostVer1 from '../../components/blog/post-ver1'
+import Post from '../../components/blog/post'
 
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
@@ -69,37 +69,8 @@ const Index = ({ posts = [], preview }) => {
           {posts.length === 0 && (
             <p className={blogStyles.noPosts}>There are no posts yet</p>
           )}
-          {posts.map((post) => {
-            return (
-              <PostVer1>
-                <article className={blogStyles.postPreview} key={post.Slug}>
-                  <h3>
-                    <span className={blogStyles.titleContainer}>
-                      {!post.Published && (
-                        <span className={blogStyles.draftBadge}>Draft</span>
-                      )}
-                      <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                        <a>{post.Page}</a>
-                      </Link>
-                    </span>
-                  </h3>
-                  {post.Authors.length > 0 && (
-                    <p className="authors">By: {post.Authors.join(' ')}</p>
-                  )}
-                  {post.Date && (
-                    <aside className="posted">
-                      Posted: {getDateStr(post.Date)}
-                    </aside>
-                  )}
-                  <p>
-                    {(!post.preview || post.preview.length === 0) && ''}
-                    {(post.preview || []).map((block, idx) =>
-                      textBlock(block, true, `${post.Slug}${idx}`)
-                    )}
-                  </p>
-                </article>
-              </PostVer1>
-            )
+          {posts.map((post, index) => {
+            return <Post post={post} key={index} />
           })}
         </div>
       </div>
