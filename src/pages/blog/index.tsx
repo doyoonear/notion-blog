@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Header from '../../components/header'
+import PostVer1 from '../../components/blog/post-ver1'
 
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
@@ -64,39 +65,43 @@ const Index = ({ posts = [], preview }) => {
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>Pear Enough</h1>
-        {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
-        )}
-        {posts.map((post) => {
-          return (
-            <article className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <span className={blogStyles.titleContainer}>
-                  {!post.Published && (
-                    <span className={blogStyles.draftBadge}>Draft</span>
+        <div className={blogStyles.container}>
+          {posts.length === 0 && (
+            <p className={blogStyles.noPosts}>There are no posts yet</p>
+          )}
+          {posts.map((post) => {
+            return (
+              <PostVer1>
+                <article className={blogStyles.postPreview} key={post.Slug}>
+                  <h3>
+                    <span className={blogStyles.titleContainer}>
+                      {!post.Published && (
+                        <span className={blogStyles.draftBadge}>Draft</span>
+                      )}
+                      <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                        <a>{post.Page}</a>
+                      </Link>
+                    </span>
+                  </h3>
+                  {post.Authors.length > 0 && (
+                    <p className="authors">By: {post.Authors.join(' ')}</p>
                   )}
-                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                    <a>{post.Page}</a>
-                  </Link>
-                </span>
-              </h3>
-              {post.Authors.length > 0 && (
-                <p className="authors">By: {post.Authors.join(' ')}</p>
-              )}
-              {post.Date && (
-                <aside className="posted">
-                  Posted: {getDateStr(post.Date)}
-                </aside>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) && ''}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
-                )}
-              </p>
-            </article>
-          )
-        })}
+                  {post.Date && (
+                    <aside className="posted">
+                      Posted: {getDateStr(post.Date)}
+                    </aside>
+                  )}
+                  <p>
+                    {(!post.preview || post.preview.length === 0) && ''}
+                    {(post.preview || []).map((block, idx) =>
+                      textBlock(block, true, `${post.Slug}${idx}`)
+                    )}
+                  </p>
+                </article>
+              </PostVer1>
+            )
+          })}
+        </div>
       </div>
     </>
   )
