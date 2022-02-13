@@ -63,12 +63,10 @@ const Index = ({ posts = [], preview }) => {
           </div>
         </div>
       )}
-      <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
+      <div>
         <h1>Pear Enough</h1>
-        <div className={blogStyles.container}>
-          {posts.length === 0 && (
-            <p className={blogStyles.noPosts}>There are no posts yet</p>
-          )}
+        <div>
+          {posts.length === 0 && <p>There are no posts yet</p>}
           {posts.map((post, index) => {
             return <Post post={post} key={index} />
           })}
