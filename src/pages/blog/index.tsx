@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Header from '../../components/header'
+import PostWrapper from '../../components/blog/post-wrapper'
 import Post from '../../components/blog/post'
+import Grid from '../../components/blog/grid'
+import Layout from '../../components/layout'
 
 import blogStyles from '../../styles/blog.module.css'
-import sharedStyles from '../../styles/shared.module.css'
-
 import {
   getBlogLink,
   getDateStr,
@@ -13,12 +14,13 @@ import {
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+import { PostType } from '../../types/common'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
 
   const authorsToGet: Set<string> = new Set()
-  const posts: any[] = Object.keys(postsTable)
+  const posts: PostType[] = Object.keys(postsTable)
     .map((slug) => {
       const post = postsTable[slug]
       // remove draft posts in production
@@ -35,7 +37,7 @@ export async function getStaticProps({ preview }) {
 
   const { users } = await getNotionUsers([...authorsToGet])
 
-  posts.map((post) => {
+  posts.map((post: PostType) => {
     post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
@@ -48,7 +50,13 @@ export async function getStaticProps({ preview }) {
   }
 }
 
-const Index = ({ posts = [], preview }) => {
+const Index = ({
+  posts = [],
+  preview,
+}: {
+  posts: PostType[]
+  preview?: string
+}) => {
   return (
     <>
       <Header titlePre="Blog" />
@@ -65,12 +73,23 @@ const Index = ({ posts = [], preview }) => {
       )}
       <div>
         <h1>Pear Enough</h1>
-        <div>
+        <Layout>
           {posts.length === 0 && <p>There are no posts yet</p>}
-          {posts.map((post, index) => {
-            return <Post post={post} key={index} />
-          })}
-        </div>
+          <Grid>
+            {posts.map(
+              (post: PostType, index: number): JSX.Element => {
+                return (
+                  <PostWrapper
+                    key={`postwrapper-${index}`}
+                    gridType={index < 11 ? index : index - 10}
+                  >
+                    <Post post={post} />
+                  </PostWrapper>
+                )
+              }
+            )}
+          </Grid>
+        </Layout>
       </div>
     </>
   )
