@@ -28,7 +28,15 @@ function applyTags(tags = [], children, noPTag = false, key) {
   return child
 }
 
-export function textBlock(text = [], noPTag = false, mainKey) {
+export function textBlock({
+  text = [],
+  noPTag = false,
+  mainKey,
+}: {
+  text: string[]
+  noPTag: boolean
+  mainKey: string
+}) {
   const children = []
   let key = 0
 
