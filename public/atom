@@ -4,16 +4,17 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2022-02-07T14:55:26.658Z</updated>
+    <updated>2022-02-15T14:57:09.199Z</updated>
     <id>My Notion Blog</id>
     <entry>
       <id>/blog/typescript-type-guard</id>
       <title>Typescript - Type Guard (타입 가드)</title>
       <link href="/blog/typescript-type-guard"/>
-      <updated>2022-01-31T15:00:00.168Z</updated>
+      <updated>2022-01-31T15:00:00.343Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-type-guard">Read more</a>
           </p>
@@ -25,10 +26,11 @@
       <id>/blog/typescript-generic</id>
       <title>Typescript - Generic</title>
       <link href="/blog/typescript-generic"/>
-      <updated>2022-01-31T15:00:00.171Z</updated>
+      <updated>2022-01-31T15:00:00.346Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-generic">Read more</a>
           </p>
@@ -43,7 +45,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-excess-property-checking">Read more</a>
           </p>
@@ -58,7 +61,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-interface">Read more</a>
           </p>
@@ -70,10 +74,11 @@
       <id>/blog/javascript-21-04-08</id>
       <title>김영보 자바스크립트 중고급</title>
       <link href="/blog/javascript-21-04-08"/>
-      <updated>2021-10-30T15:00:00.172Z</updated>
+      <updated>2021-10-30T15:00:00.347Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/javascript-21-04-08">Read more</a>
           </p>
@@ -88,7 +93,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-mapped-type">Read more</a>
           </p>
@@ -103,7 +109,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/functional-programming-4">Read more</a>
           </p>
@@ -118,7 +125,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/functional-programming-2">Read more</a>
           </p>
@@ -133,7 +141,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch3-filesystem-2">Read more</a>
           </p>
@@ -145,10 +154,11 @@
       <id>/blog/javascript-21-03-21</id>
       <title>자바스크립트 ES6+ 심화</title>
       <link href="/blog/javascript-21-03-21"/>
-      <updated>2021-10-30T15:00:00.174Z</updated>
+      <updated>2021-10-30T15:00:00.350Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/javascript-21-03-21">Read more</a>
           </p>
@@ -163,7 +173,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/functional-programming-3">Read more</a>
           </p>
@@ -178,7 +189,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/functional-programming-1">Read more</a>
           </p>
@@ -190,10 +202,11 @@
       <id>/blog/about-svg</id>
       <title>svg 에 대하여</title>
       <link href="/blog/about-svg"/>
-      <updated>2021-11-08T15:00:00.176Z</updated>
+      <updated>2021-11-08T15:00:00.352Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/about-svg">Read more</a>
           </p>
@@ -208,7 +221,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/2021-memoirs">Read more</a>
           </p>
@@ -223,7 +237,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/browser-networking-ch4">Read more</a>
           </p>
@@ -238,7 +253,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/browser-networking-ch3">Read more</a>
           </p>
@@ -250,10 +266,11 @@
       <id>/blog/조은-강의---next-jest</id>
       <title>조은 강의 - Next, Jest</title>
       <link href="/blog/조은-강의---next-jest"/>
-      <updated>2021-09-20T15:00:00.178Z</updated>
+      <updated>2021-09-20T15:00:00.355Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/조은-강의---next-jest">Read more</a>
           </p>
@@ -268,7 +285,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch6">Read more</a>
           </p>
@@ -283,7 +301,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch5">Read more</a>
           </p>
@@ -295,10 +314,11 @@
       <id>/blog/conference-fe-conf</id>
       <title>FE conf 요약</title>
       <link href="/blog/conference-fe-conf"/>
-      <updated>2021-11-21T15:00:00.180Z</updated>
+      <updated>2021-11-21T15:00:00.357Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/conference-fe-conf">Read more</a>
           </p>
@@ -313,7 +333,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch4">Read more</a>
           </p>
@@ -328,7 +349,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch3-error-handling">Read more</a>
           </p>
@@ -340,10 +362,11 @@
       <id>/blog/about-ga-gtm</id>
       <title>GA, GTM</title>
       <link href="/blog/about-ga-gtm"/>
-      <updated>2021-07-09T15:00:00.182Z</updated>
+      <updated>2021-07-09T15:00:00.360Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/about-ga-gtm">Read more</a>
           </p>
@@ -355,10 +378,11 @@
       <id>/blog/functional-programming-0</id>
       <title>함수형 프로그래밍 0 - Introduction</title>
       <link href="/blog/functional-programming-0"/>
-      <updated>2021-10-30T15:00:00.182Z</updated>
+      <updated>2021-10-30T15:00:00.360Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/functional-programming-0">Read more</a>
           </p>
@@ -373,7 +397,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch3-thread-pool">Read more</a>
           </p>
@@ -385,10 +410,11 @@
       <id>/blog/vue3-advanced</id>
       <title>Vue3 심화</title>
       <link href="/blog/vue3-advanced"/>
-      <updated>2021-02-04T15:00:00.184Z</updated>
+      <updated>2021-02-04T15:00:00.362Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/vue3-advanced">Read more</a>
           </p>
@@ -403,7 +429,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch3-filesystem-1">Read more</a>
           </p>
@@ -415,10 +442,11 @@
       <id>/blog/http-21-03-14</id>
       <title>HTTP 완벽 가이드</title>
       <link href="/blog/http-21-03-14"/>
-      <updated>2021-10-30T15:00:00.185Z</updated>
+      <updated>2021-10-30T15:00:00.363Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/http-21-03-14">Read more</a>
           </p>
@@ -433,7 +461,8 @@
       <updated>1970-01-01T00:00:00.000Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/node-ch3-node-modules">Read more</a>
           </p>
@@ -445,10 +474,11 @@
       <id>/blog/browser-networking-ch2</id>
       <title>네트워크 책 Chapter 2 - Building Blocks of TCP</title>
       <link href="/blog/browser-networking-ch2"/>
-      <updated>2021-11-21T15:00:00.186Z</updated>
+      <updated>2021-11-21T15:00:00.364Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/browser-networking-ch2">Read more</a>
           </p>
@@ -460,10 +490,11 @@
       <id>/blog/javascript-21-03-30</id>
       <title>김영보 자바스크립트 비기너</title>
       <link href="/blog/javascript-21-03-30"/>
-      <updated>2021-10-30T15:00:00.186Z</updated>
+      <updated>2021-10-30T15:00:00.364Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/javascript-21-03-30">Read more</a>
           </p>
@@ -475,10 +506,11 @@
       <id>/blog/about-regex</id>
       <title>regex, regular expression 팁</title>
       <link href="/blog/about-regex"/>
-      <updated>2021-10-30T15:00:00.186Z</updated>
+      <updated>2021-10-30T15:00:00.364Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/about-regex">Read more</a>
           </p>
@@ -490,10 +522,11 @@
       <id>/blog/browser-networking-ch1</id>
       <title>네트워크 책 Chapter 1 - Primer on Latency and Bandwidth</title>
       <link href="/blog/browser-networking-ch1"/>
-      <updated>2021-11-20T15:00:00.186Z</updated>
+      <updated>2021-11-20T15:00:00.364Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/browser-networking-ch1">Read more</a>
           </p>
@@ -505,10 +538,11 @@
       <id>/blog/web-rtc-21-03-12</id>
       <title>WEB RTC 웹 RTC 란?</title>
       <link href="/blog/web-rtc-21-03-12"/>
-      <updated>2021-10-30T15:00:00.186Z</updated>
+      <updated>2021-10-30T15:00:00.365Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/web-rtc-21-03-12">Read more</a>
           </p>
@@ -520,10 +554,11 @@
       <id>/blog/vue3-basic</id>
       <title>Vue3 베이직 공부</title>
       <link href="/blog/vue3-basic"/>
-      <updated>2021-02-04T15:00:00.187Z</updated>
+      <updated>2021-02-04T15:00:00.365Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/vue3-basic">Read more</a>
           </p>
@@ -535,10 +570,11 @@
       <id>/blog/typescript-type-examples</id>
       <title>Typescript - Type Examples</title>
       <link href="/blog/typescript-type-examples"/>
-      <updated>2022-01-31T15:00:00.187Z</updated>
+      <updated>2022-01-31T15:00:00.365Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          
+        
+
           <p class="more">
             <a href="/blog/typescript-type-examples">Read more</a>
           </p>

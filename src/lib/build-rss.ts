@@ -29,6 +29,15 @@ function decode(string) {
     .replace(/'/g, '&apos;')
 }
 
+// TODO: fix post.preview
+// ${renderToStaticMarkup(
+//   post.preview
+//     ? (post.preview || []).map((block, idx) =>
+//         textBlock(block, false, post.title + idx)
+//       )
+//     : post.content
+// )}
+
 function mapToEntry(post) {
   return `
     <entry>
@@ -38,13 +47,8 @@ function mapToEntry(post) {
       <updated>${new Date(post.date).toJSON()}</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-          ${renderToStaticMarkup(
-            post.preview
-              ? (post.preview || []).map((block, idx) =>
-                  textBlock(block, false, post.title + idx)
-                )
-              : post.content
-          )}
+        ${renderToStaticMarkup(post.content)}
+
           <p class="more">
             <a href="${post.link}">Read more</a>
           </p>
