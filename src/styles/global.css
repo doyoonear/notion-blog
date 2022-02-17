@@ -58,6 +58,31 @@ body {
   overflow-x: hidden;
 }
 
+ul,
+ol,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+em,
+address {
+  font-style: normal;
+}
+
+figure,
+form {
+  margin: 0;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   color: #000;

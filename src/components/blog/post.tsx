@@ -2,17 +2,17 @@ import React from 'react'
 import Link from 'next/link'
 import styled from 'styled-components'
 
-import Header from '../../components/header'
+import Header from '@/components/header'
 
 import {
   getBlogLink,
   getDateStr,
   postIsPublished,
 } from '../../lib/blog-helpers'
-import { textBlock } from '../../lib/notion/renderers'
+import { textBlock } from '@/lib/notion/renderers'
 
-import { sizes, colors } from '../../../styles'
-import { PostType } from '../../types/common'
+import { sizes, colors } from '@/styles'
+import { PostType } from '@/types/common'
 
 const Post = ({ post }: { post: PostType }): JSX.Element => {
   return (
