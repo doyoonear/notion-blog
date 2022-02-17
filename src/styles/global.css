@@ -83,6 +83,69 @@ form {
   margin: 0;
 }
 
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+
+  margin: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  font-size: 100%;
+  line-height: inherit;
+}
+
+button {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0 none;
+
+  background: transparent;
+
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  vertical-align: middle;
+}
+
+input[type='search'] {
+  -webkit-appearance: none;
+
+  border-radius: 0;
+}
+
+textarea {
+  vertical-align: top;
+
+  resize: vertical;
+}
+
+input:invalid,
+textarea:invalid {
+  background-color: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 100rem #fff inset;
+  box-shadow: 0 0 0 100rem #fff inset;
+}
+
 code[class*='language-'],
 pre[class*='language-'] {
   color: #000;
