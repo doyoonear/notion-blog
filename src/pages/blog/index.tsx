@@ -1,20 +1,16 @@
 import Link from 'next/link'
-import Header from '../../components/header'
-import PostWrapper from '../../components/blog/post-wrapper'
-import Post from '../../components/blog/post'
-import Grid from '../../components/blog/grid'
-import Layout from '../../components/layout'
+import Header from '@/components/header'
+import PostWrapper from '@/components/blog/post-wrapper'
+import Post from '@/components/blog/post'
+import Grid from '@/components/blog/grid'
+import Layout from '@/components/layout'
 
-import blogStyles from '../../styles/blog.module.css'
-import {
-  getBlogLink,
-  getDateStr,
-  postIsPublished,
-} from '../../lib/blog-helpers'
-import { textBlock } from '../../lib/notion/renderers'
-import getNotionUsers from '../../lib/notion/getNotionUsers'
-import getBlogIndex from '../../lib/notion/getBlogIndex'
-import { PostType } from '../../types/common'
+import blogStyles from '@/styles/blog.module.css'
+import { getBlogLink, getDateStr, postIsPublished } from '@/lib/blog-helpers'
+import { textBlock } from '@/lib/notion/renderers'
+import getNotionUsers from '@/lib/notion/getNotionUsers'
+import getBlogIndex from '@/lib/notion/getBlogIndex'
+import { PostType } from '@/types/common'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()

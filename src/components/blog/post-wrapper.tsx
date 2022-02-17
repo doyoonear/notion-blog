@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 
-import { sizes, colors } from '../../../styles'
+import { sizes, colors } from '@/styles'
 
 const getGridType = (gridType: number) => {
   switch (gridType) {
