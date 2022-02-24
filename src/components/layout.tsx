@@ -9,7 +9,10 @@ const Layout = ({
 }
 
 const StyledLayout = styled.div`
-  padding: 3rem 5rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  padding: 0 3rem;
 `
 
 export default Layout

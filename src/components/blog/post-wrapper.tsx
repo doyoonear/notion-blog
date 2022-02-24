@@ -29,29 +29,29 @@ const getGridType = (gridType: number) => {
     case 4:
       return css`
         min-height: 10rem;
-        grid-column: 1 / 6;
-        grid-row: 11 / 16;
+        grid-column: 1 / 4;
+        grid-row: 9 / 14;
       `
 
     case 5:
       return css`
         min-height: 10rem;
-        grid-column: 4 / 7;
-        grid-row: 16 / 20;
+        grid-column: 5 / 7;
+        grid-row: 13 / 18;
       `
 
     case 6:
       return css`
         min-height: 10rem;
         grid-column: 3 / 6;
-        grid-row: 20 / 24;
+        grid-row: 17 / 23;
       `
 
     case 7:
       return css`
         min-height: 10rem;
         grid-column: 1 / 3;
-        grid-row: 21 / 28;
+        grid-row: 22 / 28;
       `
 
     case 8:
@@ -64,15 +64,15 @@ const getGridType = (gridType: number) => {
     case 9:
       return css`
         min-height: 10rem;
-        grid-column: 2 / 5;
-        grid-row: 30 / 33;
+        grid-column: 2 / 4;
+        grid-row: 30 / 35;
       `
 
     case 10:
       return css`
         min-height: 10rem;
         grid-column: 4 / 7;
-        grid-row: 34 / 38;
+        grid-row: 34 / 40;
       `
 
     default:
