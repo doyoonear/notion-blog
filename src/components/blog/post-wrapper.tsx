@@ -87,9 +87,11 @@ const getGridType = (gridType: number) => {
 const PostWrapper = ({
   children,
   gridType,
+  onClick,
 }: {
   children: JSX.Element
   gridType: number
+  onClick: () => void
 }): JSX.Element => {
   return (
     <StyledPostWrapper sizes={sizes} colors={colors} gridType={gridType}>
