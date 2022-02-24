@@ -67,26 +67,23 @@ const Index = ({
           </div>
         </div>
       )}
-      <div>
-        <h1>Pear Enough</h1>
-        <Layout>
-          {posts.length === 0 && <p>There are no posts yet</p>}
-          <Grid>
-            {posts.map(
-              (post: PostType, index: number): JSX.Element => {
-                return (
-                  <PostWrapper
-                    key={`postwrapper-${index}`}
-                    gridType={index < 11 ? index : index - 10}
-                  >
-                    <Post post={post} />
-                  </PostWrapper>
-                )
-              }
-            )}
-          </Grid>
-        </Layout>
-      </div>
+      <Layout>
+        {posts.length === 0 && <p>There are no posts yet</p>}
+        <Grid>
+          {posts.map(
+            (post: PostType, index: number): JSX.Element => {
+              return (
+                <PostWrapper
+                  key={`postwrapper-${index}`}
+                  gridType={index < 11 ? index : index - 10}
+                >
+                  <Post post={post} />
+                </PostWrapper>
+              )
+            }
+          )}
+        </Grid>
+      </Layout>
     </>
   )
 }

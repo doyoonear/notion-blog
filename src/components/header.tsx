@@ -60,6 +60,7 @@ const StyledHeader = styled.header`
   font-size: 0.93rem;
   font-weight: 400;
   letter-spacing: 0.02rem;
+  z-index: 1000;
 `
 
 const NavBar = styled.div`
@@ -70,6 +71,8 @@ const NavBar = styled.div`
 `
 
 const HomeButton = styled.button`
+  position: fixed;
+  left: 3rem;
   font-size: 2rem;
   width: 6rem;
   background-color: none;

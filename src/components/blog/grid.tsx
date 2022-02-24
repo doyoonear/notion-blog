@@ -8,8 +8,7 @@ const StyledGrid = styled.section`
   display: grid;
   width: 100%;
   grid-gap: 0.6rem;
-  grid-template-columns: 16.5% 16.5% 16.5% 16.5% 16.5% 16.5%;
-  grid-template-rows: repeat(40, 3rem);
+  grid-template-rows: repeat(40, 2.5rem);
 `
 
 export default Grid
