@@ -4,13 +4,13 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2022-02-24T13:15:43.131Z</updated>
+    <updated>2022-02-24T14:53:15.368Z</updated>
     <id>My Notion Blog</id>
     <entry>
       <id>/blog/typescript-type-guard</id>
       <title>Typescript - Type Guard (타입 가드)</title>
       <link href="/blog/typescript-type-guard"/>
-      <updated>2022-01-31T15:00:00.587Z</updated>
+      <updated>2022-01-31T15:00:00.366Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -26,7 +26,7 @@
       <id>/blog/typescript-generic</id>
       <title>Typescript - Generic</title>
       <link href="/blog/typescript-generic"/>
-      <updated>2022-01-31T15:00:00.590Z</updated>
+      <updated>2022-01-31T15:00:00.370Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -74,7 +74,7 @@
       <id>/blog/javascript-21-04-08</id>
       <title>김영보 자바스크립트 중고급</title>
       <link href="/blog/javascript-21-04-08"/>
-      <updated>2021-10-30T15:00:00.591Z</updated>
+      <updated>2021-10-30T15:00:00.371Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -154,7 +154,7 @@
       <id>/blog/javascript-21-03-21</id>
       <title>자바스크립트 ES6+ 심화</title>
       <link href="/blog/javascript-21-03-21"/>
-      <updated>2021-10-30T15:00:00.593Z</updated>
+      <updated>2021-10-30T15:00:00.374Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -202,7 +202,7 @@
       <id>/blog/about-svg</id>
       <title>svg 에 대하여</title>
       <link href="/blog/about-svg"/>
-      <updated>2021-11-08T15:00:00.595Z</updated>
+      <updated>2021-11-08T15:00:00.376Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -266,7 +266,7 @@
       <id>/blog/조은-강의---next-jest</id>
       <title>조은 강의 - Next, Jest</title>
       <link href="/blog/조은-강의---next-jest"/>
-      <updated>2021-09-20T15:00:00.597Z</updated>
+      <updated>2021-09-20T15:00:00.379Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -314,7 +314,7 @@
       <id>/blog/conference-fe-conf</id>
       <title>FE conf 요약</title>
       <link href="/blog/conference-fe-conf"/>
-      <updated>2021-11-21T15:00:00.599Z</updated>
+      <updated>2021-11-21T15:00:00.381Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -362,7 +362,7 @@
       <id>/blog/about-ga-gtm</id>
       <title>GA, GTM</title>
       <link href="/blog/about-ga-gtm"/>
-      <updated>2021-07-09T15:00:00.601Z</updated>
+      <updated>2021-07-09T15:00:00.384Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -378,7 +378,7 @@
       <id>/blog/functional-programming-0</id>
       <title>함수형 프로그래밍 0 - Introduction</title>
       <link href="/blog/functional-programming-0"/>
-      <updated>2021-10-30T15:00:00.601Z</updated>
+      <updated>2021-10-30T15:00:00.384Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -426,7 +426,7 @@
       <id>/blog/vue3-advanced</id>
       <title>Vue3 심화</title>
       <link href="/blog/vue3-advanced"/>
-      <updated>2021-02-04T15:00:00.602Z</updated>
+      <updated>2021-02-04T15:00:00.386Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -458,7 +458,7 @@
       <id>/blog/http-21-03-14</id>
       <title>HTTP 완벽 가이드</title>
       <link href="/blog/http-21-03-14"/>
-      <updated>2021-10-30T15:00:00.603Z</updated>
+      <updated>2021-10-30T15:00:00.387Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -490,7 +490,7 @@
       <id>/blog/browser-networking-ch2</id>
       <title>네트워크 책 Chapter 2 - Building Blocks of TCP</title>
       <link href="/blog/browser-networking-ch2"/>
-      <updated>2021-11-21T15:00:00.604Z</updated>
+      <updated>2021-11-21T15:00:00.388Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -506,7 +506,7 @@
       <id>/blog/javascript-21-03-30</id>
       <title>김영보 자바스크립트 비기너</title>
       <link href="/blog/javascript-21-03-30"/>
-      <updated>2021-10-30T15:00:00.604Z</updated>
+      <updated>2021-10-30T15:00:00.388Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -522,7 +522,7 @@
       <id>/blog/about-regex</id>
       <title>regex, regular expression 팁</title>
       <link href="/blog/about-regex"/>
-      <updated>2021-10-30T15:00:00.604Z</updated>
+      <updated>2021-10-30T15:00:00.388Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -538,7 +538,7 @@
       <id>/blog/browser-networking-ch1</id>
       <title>네트워크 책 Chapter 1 - Primer on Latency and Bandwidth</title>
       <link href="/blog/browser-networking-ch1"/>
-      <updated>2021-11-20T15:00:00.605Z</updated>
+      <updated>2021-11-20T15:00:00.389Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -554,7 +554,7 @@
       <id>/blog/web-rtc-21-03-12</id>
       <title>WEB RTC 웹 RTC 란?</title>
       <link href="/blog/web-rtc-21-03-12"/>
-      <updated>2021-10-30T15:00:00.605Z</updated>
+      <updated>2021-10-30T15:00:00.389Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -570,7 +570,7 @@
       <id>/blog/vue3-basic</id>
       <title>Vue3 베이직 공부</title>
       <link href="/blog/vue3-basic"/>
-      <updated>2021-02-04T15:00:00.605Z</updated>
+      <updated>2021-02-04T15:00:00.389Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -586,7 +586,7 @@
       <id>/blog/typescript-type-examples</id>
       <title>Typescript - Type Examples</title>
       <link href="/blog/typescript-type-examples"/>
-      <updated>2022-01-31T15:00:00.605Z</updated>
+      <updated>2022-01-31T15:00:00.389Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
