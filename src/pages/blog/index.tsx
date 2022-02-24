@@ -1,9 +1,5 @@
 import Link from 'next/link'
-import Header from '@/components/header'
-import PostWrapper from '@/components/blog/post-wrapper'
-import Post from '@/components/blog/post'
-import Grid from '@/components/blog/grid'
-import Layout from '@/components/layout'
+import { useRouter } from 'next/router'
 
 import blogStyles from '@/styles/blog.module.css'
 import { getBlogLink, getDateStr, postIsPublished } from '@/lib/blog-helpers'
@@ -11,6 +7,12 @@ import { textBlock } from '@/lib/notion/renderers'
 import getNotionUsers from '@/lib/notion/getNotionUsers'
 import getBlogIndex from '@/lib/notion/getBlogIndex'
 import { PostType } from '@/types/common'
+
+import Header from '@/components/header'
+import PostWrapper from '@/components/blog/post-wrapper'
+import Post from '@/components/blog/post'
+import Grid from '@/components/blog/grid'
+import Layout from '@/components/layout'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
@@ -53,9 +55,12 @@ const Index = ({
   posts: PostType[]
   preview?: string
 }) => {
-  const onClickPost = (post: PostType) => {
-    ;`/blog/${getBlogLink(post.Slug)}`
-  }
+  const router = useRouter()
+
+  // const onClickPost = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, slug: string) => {
+  //   console.log('onClickPost', slug)
+  //   router.push(`/blog/${getBlogLink(slug)}`)
+  // }
 
   return (
     <>
@@ -77,13 +82,15 @@ const Index = ({
           {posts.map(
             (post: PostType, index: number): JSX.Element => {
               return (
-                <PostWrapper
-                  key={`post-wrapper-${index}`}
-                  gridType={index < 11 ? index : index - 10}
-                  onClick={() => onClickPost(post)}
+                <Link
+                  key={post.Slug}
+                  href={`${getBlogLink(post.Slug)}`}
+                  passHref
                 >
-                  <Post post={post} />
-                </PostWrapper>
+                  <PostWrapper gridType={index < 11 ? index : index - 10}>
+                    <Post post={post} />
+                  </PostWrapper>
+                </Link>
               )
             }
           )}

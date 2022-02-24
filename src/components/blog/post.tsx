@@ -20,9 +20,7 @@ const Post = ({ post }: { post: PostType }): JSX.Element => {
       <h3>
         <span>
           {!post.Published && <span>Draft</span>}
-          <a>
-            <PostTitle sizes={sizes}>{post.Page}</PostTitle>
-          </a>
+          <PostTitle sizes={sizes}>{post.Page}</PostTitle>
         </span>
       </h3>
       {post.Authors?.length > 0 && post.Date && (
