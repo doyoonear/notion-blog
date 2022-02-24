@@ -20,11 +20,7 @@ const Post = ({ post }: { post: PostType }): JSX.Element => {
       <h3>
         <span>
           {!post.Published && <span>Draft</span>}
-          <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-            <a>
-              <PostTitle sizes={sizes}>{post.Page}</PostTitle>
-            </a>
-          </Link>
+          <PostTitle sizes={sizes}>{post.Page}</PostTitle>
         </span>
       </h3>
       {post.Authors?.length > 0 && post.Date && (

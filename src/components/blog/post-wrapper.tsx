@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, forwardRef, PropsWithChildren } from 'react'
 import styled, { css } from 'styled-components'
 
 import { sizes, colors } from '@/styles'
@@ -84,21 +84,25 @@ const getGridType = (gridType: number) => {
   }
 }
 
-const PostWrapper = ({
-  children,
-  gridType,
-}: {
+interface WrapperPropType {
   children: JSX.Element
   gridType: number
-}): JSX.Element => {
+}
+
+const PostWrapper = forwardRef<
+  HTMLAnchorElement,
+  PropsWithChildren<WrapperPropType>
+>(function (props: WrapperPropType, ref): JSX.Element {
+  const { children } = props
+
   return (
-    <StyledPostWrapper sizes={sizes} colors={colors} gridType={gridType}>
+    <StyledPostWrapper ref={ref} {...props} colors={colors}>
       {children}
     </StyledPostWrapper>
   )
-}
+})
 
-const StyledPostWrapper = styled.div`
+const StyledPostWrapper = styled.a`
   background-color: ${(props) => props.colors.primary};
   padding: 1rem;
   border: 0.01rem solid black;
