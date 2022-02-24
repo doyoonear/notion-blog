@@ -53,6 +53,10 @@ const Index = ({
   posts: PostType[]
   preview?: string
 }) => {
+  const onClickPost = (post: PostType) => {
+    ;`/blog/${getBlogLink(post.Slug)}`
+  }
+
   return (
     <>
       <Header titlePre="Blog" />
@@ -74,8 +78,9 @@ const Index = ({
             (post: PostType, index: number): JSX.Element => {
               return (
                 <PostWrapper
-                  key={`postwrapper-${index}`}
+                  key={`post-wrapper-${index}`}
                   gridType={index < 11 ? index : index - 10}
+                  onClick={() => onClickPost(post)}
                 >
                   <Post post={post} />
                 </PostWrapper>
