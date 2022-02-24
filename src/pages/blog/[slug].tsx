@@ -35,9 +35,10 @@ export async function getStaticProps({ params: { slug }, preview }) {
 
   const postData = await getPageData(post.id)
 
-  const postPageCover = postData.pageData.format
-    ? postData.pageData.format.page_cover
-    : null
+  const postPageCover =
+    postData.pageData.format && postData.pageData.format.page_cover
+      ? postData.pageData.format.page_cover
+      : null
 
   const postContent = postData.blocks
 
