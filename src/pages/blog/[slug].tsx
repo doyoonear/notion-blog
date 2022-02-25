@@ -171,7 +171,7 @@ const RenderPost = ({
       {postPageCover && (
         <div className={blogStyles.coverImg}>
           <img
-            src={postPageCover ? postPageCover : ''}
+            src={postPageCover ? postPageCover : '/blog-cover.jpg'}
             alt="page-cover-image"
           />
         </div>
