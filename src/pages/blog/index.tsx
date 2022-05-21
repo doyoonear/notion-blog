@@ -87,7 +87,7 @@ const Index = ({
                   href={`${getBlogLink(post.Slug)}`}
                   passHref
                 >
-                  <PostWrapper gridType={index < 11 ? index : index - 10}>
+                  <PostWrapper gridType={index}>
                     <Post post={post} />
                   </PostWrapper>
                 </Link>

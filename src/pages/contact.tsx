@@ -39,9 +39,14 @@ export default function Contact() {
 
         <h2 className={contactStyles.name}>Doyoon Lee</h2>
         <h2 className={contactStyles.name}>Frontend Engineer</h2>
-        <h3 className={contactStyles.company}>
-          <ExtLink href="https://day1company.co.kr/">@ Day1company</ExtLink>
-        </h3>
+        <div className={contactStyles.companyGroup}>
+          <h3>
+            <ExtLink href="https://day1company.co.kr/">@ Day1company</ExtLink>
+          </h3>
+          <h3>
+            <ExtLink href="https://zero-base.co.kr/">@ zero-base</ExtLink>
+          </h3>
+        </div>
 
         <div className={contactStyles.links}>
           {contacts.map(({ Comp, link, alt }) => {

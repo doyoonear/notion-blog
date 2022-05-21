@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components'
 import styles from '@/styles/header.module.css'
 
 const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'Drawings', page: '/drawings' },
+  { label: 'Drawings', page: 'https://www.instagram.com/pear.enough' },
   { label: 'Blog', page: '/blog' },
   { label: 'Contact', page: '/contact' },
 ]

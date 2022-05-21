@@ -13,9 +13,13 @@
   text-align: center;
 }
 
-.company {
+.companyGroup {
   margin-top: 1rem;
   text-align: center;
+}
+
+.companyGroup a {
+  color: #c0d577;
 }
 
 .links {
