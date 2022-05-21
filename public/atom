@@ -4,13 +4,13 @@
     <subtitle>Blog</subtitle>
     <link href="/atom" rel="self" type="application/rss+xml"/>
     <link href="/" />
-    <updated>2022-05-21T08:48:52.237Z</updated>
+    <updated>2022-05-21T09:05:50.181Z</updated>
     <id>My Notion Blog</id>
     <entry>
       <id>/blog/typescript-type-guard</id>
       <title>Typescript - Type Guard (타입 가드)</title>
       <link href="/blog/typescript-type-guard"/>
-      <updated>2022-01-31T15:00:00.164Z</updated>
+      <updated>2022-01-31T15:00:00.589Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -26,7 +26,7 @@
       <id>/blog/typescript-generic</id>
       <title>Typescript - Generic</title>
       <link href="/blog/typescript-generic"/>
-      <updated>2022-01-31T15:00:00.164Z</updated>
+      <updated>2022-01-31T15:00:00.589Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -282,7 +282,7 @@
       <id>/blog/browser-networking-ch2</id>
       <title>네트워크 책 Chapter 2 - Building Blocks of TCP</title>
       <link href="/blog/browser-networking-ch2"/>
-      <updated>2021-11-21T15:00:00.164Z</updated>
+      <updated>2021-11-21T15:00:00.590Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -298,7 +298,7 @@
       <id>/blog/browser-networking-ch1</id>
       <title>네트워크 책 Chapter 1 - Primer on Latency and Bandwidth</title>
       <link href="/blog/browser-networking-ch1"/>
-      <updated>2021-11-20T15:00:00.164Z</updated>
+      <updated>2021-11-20T15:00:00.590Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -314,7 +314,7 @@
       <id>/blog/javascript-21-03-30</id>
       <title>김영보 자바스크립트 비기너</title>
       <link href="/blog/javascript-21-03-30"/>
-      <updated>2021-10-30T15:00:00.165Z</updated>
+      <updated>2021-10-30T15:00:00.590Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -330,7 +330,7 @@
       <id>/blog/javascript-21-03-21</id>
       <title>자바스크립트 ES6+ 심화</title>
       <link href="/blog/javascript-21-03-21"/>
-      <updated>2021-10-30T15:00:00.165Z</updated>
+      <updated>2021-10-30T15:00:00.590Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -346,7 +346,7 @@
       <id>/blog/web-rtc-21-03-12</id>
       <title>WEB RTC 웹 RTC 란?</title>
       <link href="/blog/web-rtc-21-03-12"/>
-      <updated>2021-10-30T15:00:00.165Z</updated>
+      <updated>2021-10-30T15:00:00.591Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -362,7 +362,7 @@
       <id>/blog/vue3-basic</id>
       <title>Vue3 베이직 공부</title>
       <link href="/blog/vue3-basic"/>
-      <updated>2021-02-04T15:00:00.165Z</updated>
+      <updated>2021-02-04T15:00:00.591Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
@@ -378,7 +378,7 @@
       <id>/blog/typescript-type-examples</id>
       <title>Typescript - Type Examples</title>
       <link href="/blog/typescript-type-examples"/>
-      <updated>2022-01-31T15:00:00.166Z</updated>
+      <updated>2022-01-31T15:00:00.591Z</updated>
       <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
         
